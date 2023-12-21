@@ -83,9 +83,9 @@
           animation: textAboutMe 60s linear infinite;
         }
         .icons {
-          width: 3.5vw;
           grid-template-columns: repeat(5, 1fr);
           .icon {
+            width: 3.5vw;
             transform: scale(0.7);
             height: 7vh;
             &:first-child,
