@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Heebo;
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fldc {
+  flex-direction: column;
+}
+
+h1,
+.boxesContainer .card h2,
+.mapFormContainer .formContainer .theForm h2 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.container {
+  width: 100vw;
+}
+
+.top-container {
+  background-color: #0ee1e1;
+  height: 50vh;
+  justify-content: space-evenly;
+}
+
+.box-container img {
+  width: 12vw;
+}
+
+.whatsapp,
+.whatsapp img {
+  width: 1vw;
+}
+
+.whatsapp {
+  position: absolute;
+  background-color: white;
+  top: 2vh;
+  left: 2vw;
+}
+
+.top-section {
+  width: 40%;
+  height: 30%;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.box {
+  width: 14vw;
+  height: 20vh;
+}
+
+.boxesContainer {
+  width: 95%;
+  height: 30vh;
+  gap: 2rem;
+  margin: 2vh auto;
+  text-align: center;
+}
+
+.boxesContainer .card {
+  background: #f8f8f8;
+  gap: 2vh;
+  height: 90%;
+}
+
+.boxesContainer .card img {
+  width: 2vw;
+}
+
+.top-container h4 {
+  width: 70%;
+}
+
+.boxesContainer .card h2 {
+  color: #0ee1e1;
+}
+
+.formContainer h2 {
+  font-size: 2em;
+}
+
+.boxesContainer .card h4 {
+  width: 70%;
+}
+
+.mapFormContainer {
+  width: 100vw;
+  height: 80vh;
+}
+
+.mapFormContainer .map,
+.mapFormContainer .formContainer {
+  width: 50vw;
+  height: 100%;
+}
+
+.mapFormContainer .map {
+  background-color: #0ee1e1;
+}
+
+.mapFormContainer .map img,
+.mapFormContainer .formContainer .titles h4 {
+  width: 85%;
+}
+
+.mapFormContainer .map img {
+  height: 85%;
+}
+
+.mapFormContainer .formContainer {
+  background-color: #f0ffff;
+}
+
+.mapFormContainer .formContainer .theForm {
+  width: 40%;
+  height: 80%;
+  gap: 1rem;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.mapFormContainer .formContainer .theForm h2 {
+  color: #090909;
+}
+
+.mapFormContainer .formContainer .theForm h4 {
+  height: 15%;
+}
+
+.inputContainer,
+.textareaContainer,
+.inputContainer input,
+.textareaContainer textarea,
+.buttonContainer,
+.buttonContainer button,
+.descenderLine .line,
+.descenderLine {
+  width: 100%;
+}
+
+.inputContainer input,
+.textareaContainer textarea,
+.textareaContainer textarea,
+.buttonContainer button,
+.descenderLine .line {
+  height: 100%;
+}
+
+.inputContainer input {
+  height: 7vh;
+}
+
+.inputContainer,
+.textareaContainer {
+  height: 25%;
+  align-items: start;
+  gap: 1rem;
+}
+
+.inputContainer label {
+  color: #2c2c2c;
+  font-weight: bold;
+}
+
+.inputContainer input,
+.textareaContainer textarea {
+  background: #e5eeff;
+  border: initial;
+  resize: none;
+  border-bottom: 7px solid #0ee1e1;
+}
+
+.textareaContainer {
+  height: 30%;
+}
+
+.buttonContainer {
+  height: 10vh;
+}
+
+.buttonContainer button {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.buttonContainer button,
+.iconsContainer .whatsappContainer,
+.descenderLine .line {
+  background-color: #0ee1e1;
+}
+
+.iconsContainer .whatsappContainer,
+.whatsapp {
+  border-radius: 50%;
+  width: 3vw;
+  height: 6%;
+}
+
+.iconsContainer {
+  height: 12vh;
+  justify-content: space-around;
+  width: 20%;
+  margin: auto;
+}
+
+.iconsContainer .whatsappContainer {
+  width: 3vw;
+  height: 55%;
+  justify-content: space-evenly;
+}
+
+.iconsContainer .whatsappContainer img,
+.whatsapp img {
+  width: 45%;
+  height: 50%;
+}
+
+.descenderLine {
+  height: 2vh;
+}
+
+@media (max-width: 767px) {
+  .top-container,
+  .boxesContainer {
+    flex-direction: column;
+  }
+  .mapFormContainer {
+    height: fit-content;
+  }
+  .mapFormContainer,
+  .formContainer,
+  .map {
+    width: 100% !important;
+  }
+  .map {
+    width: 50vw;
+  }
+  .map img,
+  .mapFormContainer .formContainer .theForm {
+    width: 80%;
+  }
+  .top-section,
+  .box-container {
+    width: 70%;
+  }
+  .iconsContainer {
+    width: 75%;
+    height: 20vh;
+  }
+  .textareaContainer {
+    height: 25vh !important;
+  }
+  .mapFormContainer .formContainer .theForm,
+  .top-container {
+    gap: 2rem;
+  }
+
+  .mapFormContainer .formContainer .theForm {
+    height: 100%;
+    margin: 6vh 0;
+    justify-content: space-evenly;
+  }
+  .iconsContainer .whatsappContainer {
+    width: 18%;
+    height: 40%;
+    gap: 4rem;
+    filter: drop-shadow(0 0 5px black);
+  }
+  .iconsContainer .whatsappContainer img {
+    width: 50%;
+  }
+  .mapFormContainer {
+    flex-direction: column-reverse;
+  }
+  .top-container {
+    justify-content: center;
+  }
+  .mapFormContainer .map img,
+  .boxesContainer .card {
+    padding: 2rem;
+  }
+  .whatsapp {
+    display: none;
+  }
+  .top-section,
+  .boxesContainer {
+    height: initial;
+  }
+  .formContainer {
+    margin: 2rem;
+  }
+  .boxesContainer .card,
+  .boxesContainer .card h4,
+  .top-container h4 {
+    width: 90%;
+  }
+  .boxesContainer .card img {
+    width: 8vw;
+  }
+  .inputContainer {
+    height: 12vh;
+  }
+  .buttonContainer,
+  .box {
+    height: 7vh;
+  }
+}

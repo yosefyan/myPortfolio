@@ -1,0 +1,77 @@
+@import "../generalScss/Variables";
+@import "../generalScss/Mixin";
+
+.navBar {
+  width: 65vw;
+  z-index: 2 !important;
+  justify-content: space-between;
+  .navLi {
+    width: fit-content;
+    @include gradientText($text-color-dark, $subText-color-dark);
+    &:first-child {
+      flex: 1;
+      letter-spacing: initial;
+    }
+    a {
+      padding: 2vw;
+      text-align: center;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+    }
+  }
+  img {
+    width: 2.5vw;
+  }
+}
+
+.bBorder {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+@include mobile {
+  .navBar {
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    background: linear-gradient(
+      205deg,
+      $sub-background-dark 40%,
+      $subText-color-dark
+    );
+    flex-direction: column;
+    img {
+      height: 20%;
+    }
+  }
+  .navBar .navLi {
+    width: 100%;
+    border-bottom: 0.4vh solid rgba(128, 128, 128, 0.226);
+    &:last-child {
+      border-bottom: 0;
+    }
+    a {
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.11);
+      }
+    }
+  }
+  .area {
+    height: 85%;
+    justify-content: end;
+    align-items: center;
+    display: flex !important;
+    .hamburgerMenu {
+      margin-right: 3vw;
+      align-items: flex-end;
+      width: fit-content;
+      .line {
+        width: 10vw;
+        border-bottom: 1vmin dashed $text-color-dark;
+        height: 2vh;
+      }
+    }
+  }
+}

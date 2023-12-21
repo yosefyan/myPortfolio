@@ -1,0 +1,40 @@
+body {
+  font-family: Heebo;
+}
+
+.fullContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+form h1 {
+  font-size: 3.5em;
+  color: #093c5a;
+}
+
+form h3,
+.inputContainer label {
+  color: #0391e1;
+}
+
+.inputContainer input {
+  background-color: lightblue;
+  border: 0;
+  border-bottom: 0.5rem solid rgb(8, 8, 87);
+}
+
+.inputContainer button {
+  color: white;
+  background-color: #093c5a;
+}
+
+@media (max-width: 767px) {
+  .planeContainer {
+    width: 100% !important;
+    height: 25% !important;
+  }
+  .fullContainer form {
+    width: 85% !important;
+    justify-content: center !important;
+  }
+}

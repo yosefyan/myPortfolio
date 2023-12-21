@@ -1,0 +1,63 @@
+// Mixin for changing the background color of a typography.
+
+@mixin gradientText($colors...) {
+  background: linear-gradient(#{$colors});
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Mixin for changing the background image.
+@mixin backgroundImage($image) {
+  background-image: url($image);
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+// Mixin for the tablet query
+@mixin tablet {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+// Mixin for the mobile query.
+@mixin mobile {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+//Mixin for the hover effect of scale.
+@mixin hoverEffect($scale) {
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+/* 
+   Mixin for rotating a circle by X and Y
+   and if needed - have movement animations
+   addidtional styles were added for the circle.
+*/
+@mixin circle($true) {
+  $transformations: rotateY(180deg) rotateX(76deg);
+
+  @if $true {
+    $transformations: #{$transformations} translateY(42vh);
+  }
+
+  transform: $transformations;
+  animation: solarEclipse 4s linear infinite;
+  box-shadow: 0 0 1vmin #fff;
+  width: 33vw;
+  height: 55%;
+  border-radius: 50%;
+  align-items: flex-end;
+  filter: blur(0.3vmin) brightness(3) opacity(0.3);
+}
+
+//Mixin to apply border right and left from the top side.
+@mixin borderRadius($par) {
+  border-top-left-radius: $par;
+  border-top-right-radius: $par;
+}

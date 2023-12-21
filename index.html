@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yosef Yanushok</title>
+    <link rel="stylesheet" href="./Style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <script src="./Script/index.js" type="module" defer></script>
+    <link
+      rel="shortcut icon"
+      href="./Images/Icons/favicon/theFavicon.png"
+      type="image/x-icon" />
+  </head>
+  <body>
+    <header id="navHeader">
+      <nav class="relative fix">
+        <div class="area hFull flex jcc dn">
+          <div id="hamburgerMenu" class="hamburgerMenu acc fldc"></div>
+        </div>
+        <ul class="navBar flex acc hFull flex trans" id="navBarContainer"></ul>
+        <div id="line" class="bBorder trans"></div>
+      </nav>
+    </header>
+    <main>
+      <div class="lights aboutMe hFull">
+        <div class="earth">
+          <div id="solarSystem" class="solarSystem flex hFull"></div>
+        </div>
+      </div>
+      <section class="openingSection bAttach flex sections">
+        <div class="sideText hFull flex jcc fldc fds">
+          <h1 class="openingTitle">Yoseful</h1>
+          <h3>Discovering Innovation,</h3>
+          <h4>
+            Inspired By
+            <span class="changeText" id="changeText">The Cosmos.</span>
+          </h4>
+        </div>
+        <div class="decoration fldc flex hFull absolute">
+          <div class="planet wFull hFull"></div>
+          <div id="lines" class="lines wFull absolute hFull flex fldc"></div>
+        </div>
+      </section>
+      <div id="About" class="fix"></div>
+      <div class="aboutMe flex hFull jcc acc">
+        <section class="selfInfo flex fldc jcc acc sections">
+          <div class="area p2vmin wFull hFull relative flex acc bRadius">
+            <div id="hologram" class="hologram fldc hFull flex acc">
+              <img
+                class="wFull hFull bgImage bRadius"
+                src="./Images/Background/pfp.png"
+                alt="Yosef's profile picture" />
+              <div class="signature wFull"></div>
+              <button class="button1 bRadius trans pointer p2vmin">
+                <a
+                  href="./myResume.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >📑 RESUME</a
+                >
+              </button>
+            </div>
+            <div class="cont flex fldc p2vmin">
+              <h1>About</h1>
+              <p class="textDesc trans flex acc wFull hFull relative jcc">
+                It all began while I served at army, I started researching the
+                web, day after day. Until I've stumbled upon Full-Stack, made
+                many succesful top-secret projects as a soldier in a short
+                amount of time. Not only I've managed to study it all by myself
+                and achieve superb achievements, but made my army commanders
+                create a whole dev team inspired by my work.
+              </p>
+              <div id="icons" class="icons grid wFull hFull"></div>
+            </div>
+          </div>
+        </section>
+        <div
+          id="spinningIcons"
+          class="spinningIcons relative flex jcc acc hFull"></div>
+      </div>
+      <div id="Projects" class="fix"></div>
+      <div id="projectsSection" class="Projects flex hFull jcc fldc">
+        <dialog id="dialog" class="wFull hFull o0 trans">
+          <div class="wFull hFull">
+            <nav class="fix">
+              <ul class="preview navBar flex acc hFull flex trans">
+                <li
+                  id="closeDialog"
+                  class="navLi wFull flex acc pointer hFull trans">
+                  <a class="aNav wFull hFull flex acc jcc trans"
+                    >😼 Yosef Yanushok</a
+                  >
+                </li>
+              </ul>
+              <div id="line" class="bBorder trans"></div>
+            </nav>
+            <section>
+              <div class="projContainer flex jcc acc">
+                <div class="spaceship hFull flex jcc acc fldc">
+                  <div class="flex jcc acc fldc">
+                    <div id="spaceshipBG" class="topArea fds flex jcc acc fldc">
+                      <div class="textBG wFull hFull flex jcc acc fldc">
+                        <h2 id="projTitle" class="projName fds"></h2>
+                        <h3 id="projDesc" class="fds"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id="theIcons"
+                      class="project flex acc jcc p2vmin bShadow fds"></div>
+                  </div>
+                  <div id="button" class="buttons wFull flex relative"></div>
+                  <div class="wing"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </dialog>
+        <div class="parts wFull flex relative">
+          <div class="tabletContainer flex jcc acc hFull fldc">
+            <div class="upperPart wFull flex">
+              <div
+                id="tabletScreen"
+                class="tablet bAttach on wFull bRadius trans p2vmin">
+                <div id="folderContainer" class="icon grid trans hFull"></div>
+              </div>
+            </div>
+            <div class="buttonTablet flex jcc acc bRadius">
+              <button id="homeButton" class="button2 trans pointer"></button>
+            </div>
+          </div>
+          <div class="computer flex jcc acc fldc">
+            <section
+              id="projectsScroll"
+              class="projGrid wFull hFull bShadow bRadius relative">
+              <h1 class="p2vmin">Projects</h1>
+              <h2 class="p2vmin">
+                Switch between the folders of tablet to select different project
+                files.
+              </h2>
+              <div id="pages" class="pages wFull relative">
+                <div
+                  id="landingPages"
+                  class="wholeProjects absolute wFull hFull flex fldc acc trans">
+                  <div id="bootstrap" class="bootstrap"></div>
+                  <div id="nonBootstrap" class="nonBootstrap"></div>
+                </div>
+                <div
+                  id="jsProjects"
+                  class="wholeProjects absolute wFull hFull flex fldc acc trans o0">
+                  <div id="css" class="bootstrap"></div>
+                  <div id="nonCss" class="nonBootstrap"></div>
+                </div>
+              </div>
+            </section>
+            <div class="circle planet"></div>
+          </div>
+        </div>
+      </div>
+      <div id="Contact" class="fix"></div>
+      <div class="Contact p2vmin flex">
+        <div class="leftArea flex acc jcc">
+          <section class="wFull contactOpening p2vmin flex">
+            <h1>Contact</h1>
+            <h2>
+              Just like in a galaxy, we've stumbled upon a place where two
+              planets collide — ideas and possibilities.
+            </h2>
+            <h3>
+              How about we make this cosmic collaboration happen? Reach out to
+              me today.
+            </h3>
+          </section>
+        </div>
+        <div
+          id="planetContainer"
+          class="planetContainer wFull hFull flex acc jcc"></div>
+      </div>
+    </main>
+    <footer>
+      <section class="credits flex p2vmin">
+        <div class="leftArea">
+          <h3 class="p2vmin">&copy; 2023 Yosef Yanushok</h3>
+          <h4 class="p2vmin">All rights reserved.</h4>
+        </div>
+        <div class="rightArea">
+          <ul id="iconList" class="iconList flex p2vmin jcc acc hFull"></ul>
+        </div>
+      </section>
+    </footer>
+    <div id="cursor" class="cursorStyles">
+      <img
+        class="wFull hFull"
+        src="./Images/Icons/svgs/space-planet-icon.svg"
+        alt="planet" />
+    </div>
+  </body>
+</html>

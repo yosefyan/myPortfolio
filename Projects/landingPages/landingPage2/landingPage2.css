@@ -1,0 +1,60 @@
+body {
+  background: transparent linear-gradient(180deg, #281eff 0%, #2dff8c 100%) 0%
+    0% no-repeat padding-box;
+}
+
+h1 {
+  font: normal normal normal 160px/231px Satisfy;
+}
+*:not(h1) {
+  font: Varela Round;
+}
+
+label {
+  font: normal normal normal 11px/13px Varela Round;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fShadow {
+  filter: drop-shadow(0 0 1vmin black);
+}
+.inputContainer input {
+  background: #f6f6f624 0% 0% no-repeat padding-box;
+  height: 50px !important;
+}
+.buttonContainer {
+  height: 10vh !important;
+}
+.custom-border {
+  border-width: 2px !important;
+}
+@media (max-width: 1023px) {
+}
+@media (max-width: 767px) {
+  h1 {
+    font: normal normal normal 60px/86px Satisfy;
+  }
+  .generalContainer {
+    height: 50% !important;
+    margin-top: initial !important;
+    justify-content: space-between;
+  }
+  .inputContainer {
+    height: 30% !important;
+  }
+  .mobile,
+  .buttonContainer {
+    width: 100% !important;
+  }
+  .buttonContainer {
+    height: 100%;
+  }
+  .buttonContainer button {
+    color: #2823fd;
+    background: #ffffff 0% 0% no-repeat padding-box;
+  }
+}

@@ -1,0 +1,193 @@
+@import "../generalScss/Mixin";
+@import "../generalScss/Animations";
+
+.lights {
+  height: 100vh;
+  position: fixed;
+}
+
+.aboutMe {
+  .earth {
+    width: 45%;
+    .solarSystem {
+      position: absolute;
+      .planetContainer {
+        @for $i from 1 through 9 {
+          &:nth-child(#{$i}) {
+            scale: 11;
+            width: 100%;
+            padding: 2vmin * $i;
+            animation: rotate#{$i} 180s linear infinite;
+            @include Rotator($i * 20deg, 360deg * $i, rotate#{$i});
+            height: 8% * $i;
+            border-radius: 50%;
+            filter: blur(0.7vmin);
+            transform: rotateY(50deg);
+          }
+        }
+        p {
+          transform: rotate(-1deg);
+          @include backgroundImage("");
+          width: 15%;
+          pointer-events: none;
+          height: 20%;
+        }
+        &:nth-child(even) {
+          justify-content: flex-end;
+          border: 0.35vmin solid $text-color-light;
+        }
+        &:nth-child(4) {
+          justify-content: center !important;
+        }
+        &:nth-child(odd) {
+          justify-content: flex-start;
+          border: 0.35vmin solid $subText-color-dark;
+        }
+      }
+    }
+  }
+  .selfInfo {
+    justify-content: space-evenly;
+    width: 55%;
+    .area {
+      height: fit-content;
+      justify-content: space-evenly;
+
+      .hologram {
+        width: 50%;
+      }
+      .cont {
+        flex-direction: column;
+        display: flex;
+        width: 60%;
+        border-left: 3px dashed rgba(128, 128, 128, 0.438);
+        .textDesc,
+        h1 {
+          color: $subText-color-dark;
+          font-size: $mediumFZ;
+        }
+        .textDesc {
+          font-size: $normalFZ - 0.2;
+          line-height: $lHeightLarge;
+          text-align: justify;
+          overflow: hidden;
+          @include linearRotate(
+            $subText-color-dark,
+            $text-color-dark,
+            #66351a,
+            textAboutMe
+          );
+          @include gradientText(0, transparent, transparent);
+          background-position: 0% 0%, 0% 0%, 0% 0%;
+          background-size: 50% 900%;
+          animation: textAboutMe 60s linear infinite;
+        }
+        .icons {
+          grid-template-columns: repeat(5, 1fr);
+          .icon {
+            transform: scale(0.7);
+            height: 7vh;
+            &:first-child,
+            &:nth-child(2) {
+              display: none;
+            }
+            a {
+              cursor: default;
+              @include backgroundImage("");
+            }
+          }
+        }
+      }
+      .hologram {
+        width: 35%;
+        height: 80vh;
+        justify-content: space-evenly;
+        .signature {
+          opacity: 0.25;
+          filter: drop-shadow(0 0 1vmin gray);
+          width: 50%;
+          height: 25%;
+          @include backgroundImage("../Images/Icons/signature/signature2.png");
+        }
+        img {
+          width: 80%;
+          height: 35%;
+          filter: drop-shadow(0 0 2vmin black);
+          clip-path: circle(45% at 50% 50%);
+          opacity: 0.9;
+          background: linear-gradient(transparent, #ffa50042 250%);
+        }
+      }
+    }
+    .movingLight {
+      height: 5vh;
+      border: 3px solid gray;
+    }
+    .aboutMeTitle {
+      color: $subText-color-dark;
+      font-size: $mediumFZ;
+    }
+  }
+  .spinningIcons {
+    .iconArea {
+      @for $i from 1 through 11 {
+        &:nth-child(#{$i}) {
+          justify-content: flex-start;
+          width: 8.5vmin * $i;
+          height: 8.5vmin * $i;
+          z-index: $i * -1;
+          border: 3px dashed rgba(128, 128, 128, 0.267);
+          animation: rotate#{$i} 280s linear infinite;
+          @include Rotator($i * 60deg, 420deg * $i, rotate#{$i});
+          border-radius: 50%;
+          transform: rotateY(50deg);
+        }
+        &:first-child {
+          background-color: yellow;
+          filter: blur(4vmin);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+      }
+      &:hover {
+        border: 3px dashed $text-color-dark;
+      }
+      img {
+        cursor: default;
+        @include backgroundImage("");
+        transform: translateX(-50%);
+        height: 5vh;
+      }
+    }
+  }
+  .selfInfo,
+  .spinningIcons {
+    width: 50%;
+  }
+}
+
+@include tablet {
+  .aboutMe {
+    flex-direction: column;
+    height: 160vh;
+    .spinningIcons {
+      width: initial;
+    }
+  }
+  .selfInfo {
+    width: initial !important;
+  }
+}
+
+@include mobile {
+  .aboutMe {
+    height: fit-content;
+    .selfInfo .area {
+      margin: 5vmin;
+    }
+    .spinningIcons {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Heebo;
+  overflow-x: hidden;
+}
+h2 {
+  color: #fdbd03;
+  font-size: 3em;
+  font-weight: 900;
+}
+h4 {
+  color: #020253;
+  width: 70%;
+  margin: 2rem 0;
+  font-weight: normal;
+}
+label {
+  color: #2c2c2c;
+}
+label,
+.inputContainer button {
+  font-weight: bold;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fldc {
+  flex-direction: column;
+}
+.upperLine,
+.split,
+.inputContainer input,
+.inputContainer textarea {
+  width: 100%;
+}
+
+.inputContainer,
+.combine {
+  width: 90%;
+}
+
+.inputContainer,
+.inputContainer input,
+.split img,
+.inputContainer button {
+  height: 100%;
+}
+
+.inputContainer input,
+.inputContainer textarea {
+  background: #e5eeff 0% 0% no-repeat padding-box;
+  border: initial;
+  resize: none;
+  border-bottom: 4px solid #fdbd03;
+}
+.upperLine {
+  justify-content: end;
+}
+.upperLine .line {
+  width: 20vw;
+  height: 1.5vh;
+}
+.upperLine .line,
+.whatsappContainer,
+.inputContainer button {
+  background-color: #fdbd03;
+}
+.whatsappContainer {
+  width: 3vw;
+  border-radius: 50%;
+  margin-left: 2vw;
+}
+.whatsappContainer img {
+  width: 1.3vw;
+}
+.split {
+  height: 70vh;
+  justify-content: space-evenly;
+  margin: auto;
+  direction: rtl;
+}
+.combine,
+.whatsappContainer {
+  height: 7vh;
+}
+.buttonContainer,
+.container .icons,
+.descenderLine {
+  justify-content: start;
+}
+.descenderLine .line {
+  width: 60%;
+}
+.split form,
+.inputContainer {
+  align-items: flex-start;
+}
+.buttonContainer {
+  height: 10vh;
+  align-items: flex-end;
+}
+
+.combine {
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.split form {
+  width: 50%;
+  gap: 2rem;
+}
+.inputContainer button {
+  width: 20%;
+  height: 45%;
+  font-size: 1em;
+}
+.container .icons {
+  height: 20%;
+}
+@media (max-width: 767px) {
+  .upperLine .line,
+  .split form {
+    width: 85%;
+    text-align: center;
+  }
+
+  h4,
+  .split,
+  .inputContainer,
+  .combine,
+  .inputContainer button,
+  .descenderLine .line,
+  .cont {
+    width: 100%;
+  }
+  .split form,
+  .inputContainer button,
+  .combine {
+    height: 100%;
+  }
+  .split form,
+  .container .icons {
+    justify-content: center;
+  }
+  .split {
+    height: 100%;
+  }
+  .container .icons {
+    gap: 2rem;
+  }
+  .split,
+  .combine {
+    flex-direction: column;
+  }
+  .inputContainer input {
+    height: 100%;
+  }
+  .split img {
+    height: 20%;
+    margin: 2vh 0;
+  }
+  .whatsappContainer {
+    width: 10vw;
+  }
+  .whatsappContainer img {
+    width: 4.3vw;
+  }
+  .whatsapp {
+    display: none;
+  }
+  .buttonContainer {
+    height: 15vh;
+  }
+}

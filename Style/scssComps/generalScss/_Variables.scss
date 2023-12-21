@@ -1,0 +1,30 @@
+//Website colors
+$primary-background-dark: #222222;
+$sub-background-dark: #181818;
+$text-color-dark: #bba25d;
+$subText-color-dark: #835714;
+$text-color-light: #333333;
+
+// font sizes
+$smallFZ: 1em;
+$normalFZ: 1.55em;
+$mediumFZ: 2.7em;
+$largeFZ: 5em;
+$XLargeFZ: 6em;
+
+// text spacing
+$lHeightNormal: 2vh;
+$lHeightMedium: 4vh;
+$lHeightLarge: 6vh;
+
+// font families
+$fHeader: Orbitron;
+$fNormal: "Exo 2";
+
+// transitions speed
+$trans: all, 0.5s;
+$translow: all, 1s;
+
+// media queries - screen width
+$mobile-width: 767px;
+$tablet-width: 1300px;

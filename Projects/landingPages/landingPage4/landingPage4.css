@@ -1,0 +1,75 @@
+body {
+  background: url("../../Images/landingPages/landingPagePictures/landingPage4/blueArrow.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 65vh;
+  font: normal normal bold 86px/113px Assistant;
+}
+section {
+  height: 65vh;
+}
+form {
+  height: 35vh;
+}
+
+h1 {
+  color: #d3e10e;
+  font-size: 4rem;
+}
+button {
+  background-color: #d3e10e;
+}
+h5 {
+  color: #f9f9f9;
+}
+.buttonContainer {
+  width: 15% !important;
+  height: 80% !important;
+}
+.buttonContainer button,
+label {
+  color: #011560 !important;
+}
+.generalContainer {
+  height: 15vh;
+}
+.inputContainer input {
+  background: #f6f6f6 0% 0% no-repeat padding-box;
+  border-bottom: 5px solid #d3e10e !important;
+  height: 35% !important;
+}
+form {
+  width: 85% !important;
+}
+@media (max-width: 1023px) {
+  .inputContainer {
+    width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    height: 75% !important;
+  }
+  section {
+    height: 45vh;
+  }
+  .generalContainer {
+    height: 55vh;
+  }
+  body {
+    background-size: 100vw 45vh;
+  }
+  .buttonContainer,
+  .inputContainer {
+    width: 100% !important;
+    height: 25% !important;
+  }
+  .buttonContainer {
+    align-items: center !important;
+  }
+  .inputContainer input {
+    height: 50% !important;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}

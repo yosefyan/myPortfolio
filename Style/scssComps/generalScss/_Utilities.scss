@@ -1,0 +1,114 @@
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.fldc {
+  flex-direction: column;
+}
+
+.wFull {
+  width: 100%;
+}
+
+.hFull {
+  height: 100%;
+}
+
+.active {
+  height: 50vh !important;
+  overflow: initial !important;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.acc {
+  align-items: center;
+}
+
+.p20 {
+  padding: 20px;
+}
+
+.p2vmin {
+  padding: 2vmin;
+}
+
+.trans {
+  transition: all, 0.5s;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.lSpacing {
+  letter-spacing: 0.1vw;
+}
+
+.bShadow {
+  box-shadow: 0 0 1vmin black;
+}
+
+.tShadow {
+  text-shadow: 0 0 1vmin black;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.dn {
+  display: none;
+}
+
+.pn {
+  pointer-events: none;
+}
+
+.bRadius {
+  border-radius: 15px;
+}
+
+.fix {
+  height: 75px;
+  background-color: #050402;
+}
+
+.red {
+  color: rgba(233, 5, 5, 0.829);
+}
+
+.bAttach {
+  background-attachment: fixed;
+}
+
+.selected {
+  background: rgba(66, 39, 19, 0.27);
+  filter: drop-shadow(0 0 1vmin #7d7777);
+}
+
+.o0 {
+  opacity: 0;
+  overflow: hidden;
+  z-index: -2;
+  height: 0 !important;
+}
+
+.cSoon {
+  pointer-events: none !important;
+  filter: grayscale(.8);
+}
+
+.fds {
+  filter: drop-shadow(0 0 1vmin black);
+}

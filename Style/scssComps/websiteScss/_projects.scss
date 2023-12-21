@@ -1,0 +1,269 @@
+@import "../generalScss/Variables";
+@import "../generalScss/Mixin";
+@import "../generalScss/Animations";
+
+#Projects {
+  background: $sub-background-dark;
+}
+.Projects {
+  background: $primary-background-dark;
+  padding: 3vh 0 6vh 0;
+}
+
+.Projects {
+  h1 {
+    font-size: $mediumFZ;
+    color: $subText-color-dark;
+  }
+  .parts {
+    height: 90vh;
+    .tabletContainer {
+      animation: tabletMove 5s ease-in infinite;
+      filter: drop-shadow(0 0 2vmin black);
+      @include Move(-1vh, 1vh, Y, tabletMove);
+      width: 45%;
+      .upperPart {
+        box-shadow: 0 0 20vmin black;
+        margin-bottom: initial;
+        .tablet {
+          @include backgroundImage("../Images/Background/tabletBackground.jpg");
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-columns: repeat(4, 1fr);
+          height: 70vh;
+          border-top: 3vmin solid;
+          border-left: 3vmin solid;
+          border-right: 3vmin solid;
+          border-bottom-left-radius: initial;
+          border-bottom-right-radius: initial;
+          border-image: linear-gradient(#0f110f, #211d1c 40%, #462b16) 30;
+          .icon {
+            height: 82%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            .folder {
+              text-align: center;
+              @include hoverEffect(0.95);
+              &::before {
+                content: "📁";
+                font-size: $mediumFZ + 1em;
+              }
+              &:hover {
+                background-color: rgba(128, 128, 128, 0.11);
+              }
+            }
+          }
+          .returnButton {
+            font-size: $normalFZ;
+            margin-bottom: 4vh;
+          }
+          .folderDesc {
+            font-size: $normalFZ - 1em;
+          }
+        }
+      }
+      .buttonTablet {
+        height: 7vh;
+        z-index: 1;
+        background: linear-gradient(rgb(62, 40, 23), rgba(115, 83, 0, 0.44));
+        @include borderRadius(initial);
+        button {
+          background-color: $subText-color-dark;
+        }
+      }
+      .upperPart,
+      .buttonTablet {
+        width: 80%;
+      }
+    }
+    .computer {
+      width: 65%;
+      height: 95%;
+      margin: auto;
+      transform: rotateY(40deg) rotateX(20deg);
+      justify-content: space-between !important;
+      .projGrid {
+        @include backgroundImage("../Images/Background/pcBackground.jpg");
+        height: 100vh;
+        margin: auto;
+        animation: rainbow 15s ease-in-out infinite;
+        @keyframes rainbow {
+          0% {
+            box-shadow: -2vmin 0 12vmin rgba(255, 0, 0, 0.35);
+          }
+          25% {
+            box-shadow: -2vmin 0 12vmin rgba(0, 128, 0, 0.35);
+          }
+          50% {
+            box-shadow: -2vmin 0 12vmin rgba(128, 0, 128, 0.35);
+          }
+          75% {
+            box-shadow: -2vmin 0 12vmin rgba(0, 0, 255, 0.35);
+          }
+          100% {
+            box-shadow: -2vmin 0 12vmin rgba(255, 0, 0, 0.35);
+          }
+        }
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 2;
+        box-shadow: -2vmin 0 5vmin black;
+        outline: 3vmin solid #000000b2;
+        h1 {
+          position: sticky;
+          top: 0;
+          z-index: 3;
+          box-shadow: inset 0 0 3vmin $subText-color-dark;
+        }
+        h2 {
+          line-height: $lHeightLarge;
+        }
+        .pages {
+          height: auto;
+          .wholeProjects .bootstrap,
+          .wholeProjects .nonBootstrap,
+          .soon {
+            justify-items: center;
+            display: grid;
+            width: 55vw;
+            gap: 4vmin;
+            top: 0;
+            grid-template-columns: repeat(2, 1fr);
+            .bothCard {
+              width: 75%;
+              height: 35vh;
+              margin-bottom: 3vh;
+              overflow: hidden;
+              @include hoverEffect(0.95);
+              .project {
+                height: 75%;
+                @include backgroundImage("");
+                box-shadow: 0 0 5vmin $subText-color-dark;
+                opacity: 0.7;
+                filter: drop-shadow(0 0 1vmin rgba(0, 0, 0, 0.589));
+                align-items: flex-end;
+                gap: 2vmin;
+                .miniIcon {
+                  width: 17%;
+                  height: 22%;
+                  filter: drop-shadow(0 1vmin 1vmin black);
+                  &:nth-child(even) {
+                    animation: miniIconEven 3s ease-in-out infinite;
+                    @include Move(5vh, 4vh, Y, miniIconEven);
+                  }
+                  &:nth-child(odd) {
+                    animation: miniIconOdd 3s ease-in-out infinite;
+                    @include Move(4vh, 5vh, Y, miniIconOdd);
+                  }
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    display: inline-block;
+                    width: 50%;
+                    height: 50%;
+                    z-index: 2;
+                    border: 3px solid white;
+                  }
+                }
+                a {
+                  height: initial;
+                }
+              }
+              .textCover {
+                background: #000000ba;
+                top: 12.2%;
+                height: 65%;
+                opacity: 0;
+                transform: translateY(-50%);
+                font-size: $normalFZ;
+                text-align: center;
+                line-height: $lHeightMedium;
+              }
+              &:hover .textCover {
+                transform: translateY(0);
+                opacity: 1 !important;
+              }
+            }
+          }
+        }
+      }
+      &::before {
+        content: "";
+        width: 5%;
+        height: 25%;
+        background-color: #000000ba;
+        position: absolute;
+        bottom: 5%;
+        z-index: 3;
+        border-radius: 15%;
+      }
+    }
+    .circle {
+      @include circle(true);
+    }
+  }
+}
+
+@include tablet {
+  .Projects {
+    height: 200vh;
+  }
+  .Projects .parts {
+    height: initial;
+    flex-direction: column;
+    gap: 5rem;
+    .computer .projGrid .pages .wholeProjects,
+    .computer .projGrid .pages .wholeProjects .bootstrap,
+    .computer .projGrid .pages .wholeProjects .nonBootstrap {
+      width: 80vw;
+    }
+    .projGrid {
+      width: 100%;
+      .pages {
+        .wholeProjects {
+          .bothCard {
+            width: 80%;
+            height: 50vh;
+          }
+        }
+      }
+    }
+  }
+  .Projects .parts .tabletContainer {
+    width: 70%;
+    margin: auto;
+    .upperPart,
+    .buttonTablet {
+      width: 100%;
+    }
+  }
+  .Projects .parts .computer {
+    width: 85%;
+    transform: initial;
+    &::before {
+      height: 15%;
+      bottom: 4%;
+    }
+  }
+}
+@include mobile {
+  .Projects .parts {
+    width: 95%;
+    margin: auto;
+    height: initial;
+    gap: 5rem;
+    .tabletContainer .upperPart .tablet .icon,
+    .computer .projGrid .pages .wholeProjects {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .computer .projGrid .pages .wholeProjects .bootstrap,
+    .computer .projGrid .pages .wholeProjects .nonBootstrap {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+    }
+  }
+  .Projects .parts .tabletContainer,
+  .Projects .parts .computer {
+    width: 90%;
+    transform: initial;
+  }
+}

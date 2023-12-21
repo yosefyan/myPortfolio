@@ -1,0 +1,125 @@
+@import "../generalScss/Variables";
+@import "../generalScss/Mixin";
+@import "../generalScss/Animations";
+
+%star {
+  border-bottom-left-radius: 50%;
+  transform: translate(70%, -70%) scale(1.444);
+  background: #f6f1d552;
+  filter: drop-shadow(0 0 9vmin gray) opacity(0.77) blur(1vmin);
+}
+
+.openingSection {
+  height: calc(100vh - 75px);
+  @include backgroundImage("../Images/Background/background.jpg");
+}
+
+.sideText {
+  width: 45vw;
+  gap: 4vh;
+  padding: 2vh 3vw;
+  .openingTitle {
+    font-size: $XLargeFZ;
+    letter-spacing: 0.4vw;
+    padding-bottom: 5vh;
+    border-bottom: 0.5vw dotted $subText-color-dark;
+    @include gradientText(125deg, $text-color-dark, $sub-background-dark);
+  }
+
+  h3,
+  h4 {
+    @include gradientText(45deg, $subText-color-dark, $text-color-dark);
+  }
+
+  h3 {
+    font-size: $mediumFZ;
+  }
+
+  h4 {
+    font-size: $mediumFZ - 0.5;
+    .changeText {
+      border-right: 3px dashed rgba(255, 255, 255, 0.637);
+    }
+  }
+}
+
+.decoration {
+  width: 55%;
+  justify-content: space-around;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  .planet {
+    @extend %star;
+  }
+  .lines {
+    .line {
+      opacity: 0.7;
+      @extend %star;
+      right: 0;
+      background: initial;
+      border-radius: initial;
+      transform-origin: top;
+      border-bottom: 3px solid gray;
+      height: 50%;
+      filter: blur(1vmin);
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          width: 5%;
+          height: 50% + ($i * 5);
+          animation: rotateRTL #{$i * 8}s linear infinite;
+          transform: scale(1.5);
+        }
+        &:nth-child(#{$i}):nth-child(odd) {
+          border-bottom: 3px solid rgb(243, 89, 89);
+        }
+        &:nth-child(#{$i}):nth-child(even) {
+          @include Rotator(100deg, -20deg, rotateRTL);
+          border-bottom: 3px solid yellow;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .sideText {
+    width: 75vw;
+  }
+  .area .hologram img {
+    width: 65%;
+  }
+}
+
+@include mobile {
+  .sideText {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  .sideText .openingTitle {
+    font-size: $mediumFZ + 3.5;
+  }
+  .aboutMe .selfInfo .area {
+    flex-direction: column-reverse;
+  }
+  .aboutMe .selfInfo .area .hologram {
+    width: 100%;
+    height: 100vh;
+    gap: 3vh;
+  }
+  .aboutMe .selfInfo .area .cont {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    border: initial;
+  }
+  .aboutMe .selfInfo .area .cont .icons {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2vmin;
+    height: 15vh;
+  }
+}

@@ -1,0 +1,59 @@
+::selection {
+  background: #8222ff;
+}
+@import "./Variables";
+
+h1,
+h2,
+h3,
+h4,
+label,
+input,
+textarea,
+p,
+li {
+  font-family: $fHeader;
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+h4,
+label,
+input,
+textarea {
+  @include gradientText(45deg, #835714, #bba25d);
+}
+
+textarea {
+  line-height: $lHeightMedium;
+}
+
+h1 {
+  font-size: $mediumFZ;
+}
+
+label {
+  font-size: $normalFZ;
+  font-weight: bolder;
+}
+
+li,
+p,
+button,
+.button1 {
+  letter-spacing: 0.1vw;
+  font-family: $fNormal;
+  font-size: $normalFZ;
+}
+
+p,
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+::selection {
+  background: rgba(255, 255, 0, 0.116) !important;
+}

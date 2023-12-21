@@ -1,0 +1,140 @@
+@import "../generalScss/_Animations";
+@import "../generalScss/Mixin";
+
+.Contact {
+  height: 100vh;
+  .leftArea {
+    width: 55%;
+    .contactOpening {
+      height: 50%;
+      justify-content: space-around;
+      flex-direction: column;
+      line-height: $lHeightMedium;
+    }
+  }
+  .planetContainer {
+    height: 100vh;
+    .part {
+      flex-direction: column-reverse;
+      @include Move(-1vw, 0, X, hologram2);
+      animation: hologram2 3.5s infinite ease-in-out;
+      #first {
+        @include circle(false);
+        @keyframes solarEclipse {
+          0% {
+            box-shadow: inset 0 0 15vmin $text-color-dark;
+          }
+          50% {
+            box-shadow: inset 0 0 25vmin $subText-color-dark;
+          }
+          100% {
+            box-shadow: inset 0 0 15vmin $text-color-dark;
+          }
+        }
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 20vw solid rgba(0, 0, 0, 0);
+          border-right: 20vw solid rgba(0, 0, 0, 0);
+          border-bottom: 385vh solid #bba25d83;
+          position: absolute;
+          rotate: 180deg;
+          filter: blur(4vmin);
+          z-index: -1;
+        }
+      }
+      #second {
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        box-shadow: inset 0 0 15vmin rgba(255, 255, 255, 0.432);
+        animation: hologram 3.5s infinite ease-in-out;
+
+        @include Move(-1vh, 0, Y, hologram);
+
+        opacity: 0.8;
+        .inputArea {
+          width: 80%;
+          height: 30%;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+
+          .theLabel {
+            color: $subText-color-dark;
+          }
+
+          .theInput:focus,
+          textarea:focus {
+            transform: scale(1.05) rotateX(45deg);
+            background-color: $sub-background-dark;
+            box-shadow: 0 2vmin 1vmin black;
+          }
+          .theInput,
+          textArea {
+            width: 70%;
+            color: $text-color-dark;
+          }
+          &:nth-child(4) {
+            height: 80%;
+            .theInput {
+              display: none;
+            }
+            textarea {
+              height: 80%;
+              align-items: center;
+              border: 3px dashed $text-color-dark;
+            }
+          }
+          &:last-child {
+            .theInput {
+              border: 3px dashed $text-color-dark;
+              border-style: none;
+              box-shadow: inset 0 0 2vmin green;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .planet {
+        z-index: 2;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .Contact {
+    flex-direction: column;
+    height: 165vh;
+    .leftArea {
+      width: 80%;
+      margin: auto;
+      .contactOpening {
+        height: 60vh;
+        text-align: center;
+      }
+    }
+    .planetContainer .part {
+      #first {
+        &::before {
+          border-left-width: 60vw !important;
+          border-right-width: 60vw !important;
+        }
+      }
+      #second {
+        width: 100% !important;
+        height: 145vh;
+      }
+    }
+  }
+}
+@include mobile {
+  .Contact .planetContainer .part #second .inputArea label {
+    display: none;
+  }
+  .Contact .planetContainer .part #second .inputArea .theInput,
+  .Contact .planetContainer .part #second .inputArea textarea {
+    width: 100%;
+  }
+}

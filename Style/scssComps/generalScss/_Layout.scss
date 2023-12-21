@@ -1,0 +1,82 @@
+@import "./Variables";
+@import "../generalScss/Mixin";
+@import "../generalScss/Animations";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $text-color-dark;
+  cursor: none;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+header {
+  backdrop-filter: blur(1vmin);
+  background-size: cover;
+  position: sticky;
+  top: 0;
+  z-index: 3 !important;
+}
+
+h1 {
+  color: $subText-color-dark;
+  font-size: $mediumFZ;
+}
+
+input,
+textarea {
+  background-color: initial;
+  border: initial;
+  border-bottom: 3px dashed $text-color-dark;
+  font-size: $normalFZ;
+}
+
+.button1 {
+  box-shadow: 0.32vw 0.32vh 1vmin $subText-color-dark;
+  background-color: transparent;
+  color: $text-color-dark;
+  width: 80%;
+  font-size: $normalFZ;
+  letter-spacing: 0.1vw;
+  font-weight: bolder;
+}
+
+.button2 {
+  width: 1.5vmin;
+  border-radius: 50%;
+  padding: 1vmin;
+}
+
+.cursorStyles {
+  height: 4vh;
+  position: fixed;
+  z-index: 999 !important;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: filter, transform 15s ease-in-out;
+  animation: rotateCursor 15s linear infinite;
+  @include Rotator(0, 360deg, rotateCursor);
+}
+
+button:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 1vmin $text-color-dark;
+}
+
+.aboutMe,
+.Contact,
+.projectsName {
+  background: linear-gradient(#040301, $sub-background-dark);
+}

@@ -1,0 +1,48 @@
+:root {
+  --pink: #d63384;
+}
+body {
+  background: url("../../Images/landingPages/landingPagePictures/landingPage1/pinkBG.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 65vh;
+  font: normal normal 900 36px/53px Heebo;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+button {
+  border: 0;
+  background-color: var(--pink);
+}
+.h-85 {
+  height: 85%;
+}
+@media (max-width: 1023px) {
+  .theForm {
+    width: 75% !important;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    background-size: 100vw 40vh !important;
+  }
+  .theForm {
+    width: 85% !important;
+    margin: auto;
+  }
+  .allText,
+  .inputContainer {
+    flex-direction: column;
+  }
+  .inputContainer {
+    height: initial !important;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  input {
+    height: 30%;
+  }
+}

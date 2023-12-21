@@ -1,0 +1,39 @@
+@import "../generalScss/Mixin";
+
+.credits {
+  .leftArea {
+    width: 70vw;
+  }
+  .rightArea {
+    width: 30vw;
+    .iconList {
+      width: 85%;
+      margin: auto;
+      .liIconList {
+        justify-content: space-around;
+        .aIcons {
+          @include backgroundImage("");
+          display: inline-block;
+          width: 50%;
+          height: 5vh;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .credits {
+    flex-direction: column;
+    text-align: center;
+    line-height: $lHeightMedium;
+    .rightArea,
+    .leftArea {
+      width: 100%;
+      .iconList {
+        width: 100%;
+        display: flex;
+      }
+    }
+  }
+}

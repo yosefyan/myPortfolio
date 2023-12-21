@@ -1,0 +1,41 @@
+body {
+  color: #020253;
+  overflow-x: hidden;
+  font-family: Heebo;
+}
+button {
+  background-color: #020253;
+}
+
+.coffeeContainer {
+  background: transparent
+    url("../../Images/landingPages/landingPagePictures/landingPage3/coffee.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.cont {
+  width: 100vw;
+  height: 100vh;
+}
+.inputContainer input {
+  background: #e5eeff 0% 0% no-repeat padding-box;
+  border-bottom: 5px solid #020253 !important;
+}
+.buttonContainer button {
+  width: 9vw;
+}
+@media (max-width: 767px) {
+  .coffeeContainer {
+    height: 30% !important;
+  }
+  .gmContainer {
+    height: 59% !important;
+  }
+  .gmContainer section {
+    width: 85% !important;
+    height: 75% !important;
+  }
+  .buttonContainer button {
+    width: 100% !important;
+  }
+}

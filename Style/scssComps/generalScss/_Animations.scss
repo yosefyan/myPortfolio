@@ -1,0 +1,49 @@
+/*
+ Mixin animation for rotating an element
+ by supplying the starting + ending point, and name of animation.
+ */
+@mixin Rotator($start, $end, $name) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotate($start);
+    }
+    100% {
+      transform: rotate($end);
+    }
+  }
+}
+
+/*
+ Mixin animation for moving an element 
+ by supplying the starting + ending point, direction and name of animation.
+*/
+@mixin Move($start, $end, $direction, $name) {
+  @keyframes #{$name} {
+    0% {
+      transform: translate#{$direction }($start);
+    }
+    50% {
+      transform: translate#{$direction }($end);
+    }
+    100% {
+      transform: translate#{$direction }($start);
+    }
+  }
+}
+
+/*
+  Mixin animation for creating a rotation effect on the colors,
+  by supplying 3 colors, and the name of animation.
+*/
+@mixin linearRotate($fColor, $sColor, $tColor, $name) {
+  @keyframes #{$name} {
+    from {
+      background-image: linear-gradient($fColor, $sColor, $tColor);
+      background-position: 50% 1500%;
+    }
+    to {
+      background-image: linear-gradient($fColor, $sColor, $tColor);
+      background-position: 50% 1000%;
+    }
+  }
+}

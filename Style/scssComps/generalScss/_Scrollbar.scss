@@ -1,0 +1,23 @@
+/* Firefox and others */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $subText-color-dark $sub-background-dark;
+  -ms-overflow-style: none;
+}
+
+/* Google Chrome */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $subText-color-dark;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: $sub-background-dark;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: $text-color-dark;
+}
