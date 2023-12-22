@@ -20,13 +20,20 @@ Welcome to my portfolio, where I showcase my skills and projects inspired by the
 
 ## Usage 
 
-In order running the project, you can simply open the 
+In order running the project, you can simply click the [Portfolio Link](yosefyan.github.io/myPortfolio) 
+
+If you prefer to run it locally, follow these steps:
+
+
+1 Clone this repository to your local machine.
+
+    git clone https://github.com/yosefyan/myPortfolio.git
+
+2 Open the following 
 
     index.html
 
 file in your web browser.
-
-or by clicking here [Portfolio Link](yosefyan.github.io/myPortfolio)
 
 ## Information
 
