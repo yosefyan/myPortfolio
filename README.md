@@ -18,22 +18,22 @@ Welcome to my portfolio, where I showcase my skills and projects inspired by the
 - JavaScript
 - Tailwind
 
-## Usage 
+## Usage
 
-In order running the project, you can simply click the [Portfolio Link](yosefyan.github.io/myPortfolio) 
+### Online Viewing
+To run the project online, simply click the [Portfolio Link](https://yosefyan.github.io/myPortfolio).
 
+### Local Installation
 If you prefer to run it locally, follow these steps:
 
-
-1 Clone this repository to your local machine.
-
+1. Clone this repository to your local machine.
+    ```bash
     git clone https://github.com/yosefyan/myPortfolio.git
+    ```
 
-2 Open the following 
+2. Open the `index.html` file in your web browser.
 
-    index.html
-
-file in your web browser.
+Feel free to explore, and don't hesitate to reach out if you have any questions or feedback.
 
 ## Information
 
