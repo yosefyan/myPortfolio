@@ -26,6 +26,8 @@ In order running the project, you can simply open the
 
 file in your web browser.
 
+or by clicking here [Portfolio Link](yosefyan.github.io/myPortfolio)
+
 ## Information
 
 **Name**: Yosef Yanushok
