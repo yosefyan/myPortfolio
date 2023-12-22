@@ -49,5 +49,5 @@ This project is copyrighted by Yosef Yanushok.
 
 ## Acknowledgments
 
-Special thanks to the Bootstrap and Tailwind frameworks for providing a solid foundation for the front-end of the landing pages and javascript projects in this project.
+Special thanks to the Bootstrap and Tailwind frameworks for providing a solid foundation for the front-end of the landing pages and JS in this project.
 Also, I'd like to express my gratitude to SCSS for enabling a more efficient and maintainable way to work with CSS in this project.
