@@ -16,14 +16,24 @@ Welcome to my portfolio, where I showcase my skills and projects inspired by the
 - SCSS
 - Bootstrap
 - JavaScript
+- Tailwind
 
-## Usage 
+## Usage
 
-In order running the project, you can simply open the 
+### Online Viewing
+To run the project online, simply click the [Portfolio Link](https://yosefyan.github.io/myPortfolio).
 
-    index.html
+### Local Installation
+If you prefer to run it locally, follow these steps:
 
-file in your web browser.
+1. Clone this repository to your local machine.
+    ```bash
+    git clone https://github.com/yosefyan/myPortfolio.git
+    ```
+
+2. Open the `index.html` file in your web browser.
+
+Feel free to explore, and don't hesitate to reach out if you have any questions or feedback.
 
 ## Information
 
@@ -39,5 +49,5 @@ This project is copyrighted by Yosef Yanushok.
 
 ## Acknowledgments
 
-Special thanks to the Bootstrap framework for providing a solid foundation for the front-end of the landing pages in this project.
+Special thanks to the Bootstrap and Tailwind frameworks for providing a solid foundation for the front-end of the landing pages and JS in this project.
 Also, I'd like to express my gratitude to SCSS for enabling a more efficient and maintainable way to work with CSS in this project.
