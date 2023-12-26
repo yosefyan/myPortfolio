@@ -68,7 +68,9 @@ const elements = {
     data: Array(11).fill(""),
     elementType: "figure",
     classes: "iconArea absolute flex jcc acc trans",
-    childElements: [{ elementType: "img", attributes: { src: "", alt: "" } }],
+    childElements: [
+      { elementType: "img", attributes: { src: "", alt: '' } },
+    ],
   },
   icons: {
     data: [
@@ -86,6 +88,9 @@ const elements = {
     ],
     elementType: "img",
     classes: "icon",
+    attributes: {
+      alt: "icon",
+    },
   },
   folderContainer: {
     data: Array(2).fill(""),
@@ -257,7 +262,7 @@ const elements = {
       .fill("")
       .map((_, i) =>
         i == 3
-          ? `<textarea class="p2vmin trans" placeholder="Leave a message..."></textarea>`
+          ? `<textarea class="p2vmin trans" placeholder="Leave a message..." required></textarea>`
           : ""
       ),
     elementType: "input",
@@ -275,6 +280,7 @@ const elements = {
         "",
         "",
       ],
+      required: Array(4).fill(true),
     },
     additionalElement: "label",
     additionalClasses: "theLabel",
