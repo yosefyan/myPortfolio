@@ -131,7 +131,7 @@
   }
   .spinningIcons {
     .iconArea {
-      @for $i from 1 through 11 {
+      @for $i from 1 through 12 {
         &:nth-child(#{$i}) {
           justify-content: flex-start;
           width: 8.5vmin * $i;

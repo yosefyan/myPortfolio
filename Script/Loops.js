@@ -65,12 +65,10 @@ const elements = {
     childElements: [{ elementType: "p", content: [], attributes: {} }],
   },
   spinningIcons: {
-    data: Array(11).fill(""),
+    data: Array(12).fill(""),
     elementType: "figure",
     classes: "iconArea absolute flex jcc acc trans",
-    childElements: [
-      { elementType: "img", attributes: { src: "", alt: '' } },
-    ],
+    childElements: [{ elementType: "img", attributes: { src: "", alt: "" } }],
   },
   icons: {
     data: [
@@ -81,10 +79,11 @@ const elements = {
       "./Images/Icons/regularIcons/javascript.png",
       "./Images/Icons/regularIcons/bootstrap.png",
       "./Images/Icons/regularIcons/sass.png",
-      "./Images/Icons/regularIcons/react2.png",
+      "./Images/Icons/regularIcons/react.png",
       "./Images/Icons/regularIcons/nodejs2.png",
       "./Images/Icons/regularIcons/mongoDB.png",
       "./Images/Icons/regularIcons/tailwind.png",
+      "./Images/Icons/regularIcons/typescript.png",
     ],
     elementType: "img",
     classes: "icon",
@@ -93,13 +92,13 @@ const elements = {
     },
   },
   folderContainer: {
-    data: Array(2).fill(""),
+    data: Array(3).fill(""),
     elementType: "div",
     classes: "folder bRadius flex jcc acc fldc trans pointer",
     childElements: [
       {
         elementType: "p",
-        content: ["landingPages", "javaScript"],
+        content: ["landingPages", "javaScript", "react"],
         attributes: {},
       },
     ],
@@ -234,6 +233,34 @@ const elements = {
         "../Images/Icons/regularIcons/html.png",
         "../Images/Icons/regularIcons/css.png",
         "../Images/Icons/regularIcons/javascript.png",
+        "../Images/Icons/regularIcons/tailwind.png",
+      ],
+      alt: "icons",
+    },
+  },
+  react: {
+    data: Array(1).fill(""),
+    elementType: "a",
+    classes: "project reactIcons flex jcc wFull hFull bRadius",
+    additionalElement: "p",
+    additionalClasses:
+      "textCover absolute flex jcc acc wFull trans bRadius tShadow p2vmin",
+    elementContainerClasses: "bothCard relative flex jcc acc trans pointer",
+    additionalInfo: {
+      landingPages: ["./Images/react/readySPBG.png"],
+      desc: ["Manage your cards!"],
+      neededIcons: ["react", "typescript", "sass", "tailwind"],
+    },
+  },
+  reactIcons: {
+    data: Array(4).fill(""),
+    elementType: "img",
+    classes: "miniIcon",
+    attributes: {
+      src: [
+        "../Images/Icons/regularIcons/react.png",
+        "../Images/Icons/regularIcons/typescript.png",
+        "../Images/Icons/regularIcons/sass.png",
         "../Images/Icons/regularIcons/tailwind.png",
       ],
       alt: "icons",
@@ -375,6 +402,7 @@ function loopItems(listName, containerSelector) {
         filterIcons("nonBootstrap", "nonIcons");
         filterIcons("css", "cssIcons");
         filterIcons("nonCss", "nonCssIcons");
+        filterIcons("react", "reactIcons");
         const attributesStr = Object.entries(attributes)
           .map(([key, value]) => {
             const shouldIncludeIndex = [
@@ -456,6 +484,7 @@ const severalElements = [
   "nonIcons",
   "cssIcons",
   "nonCssIcons",
+  "reactIcons",
   "aNav",
   "liIconList",
   "icons",

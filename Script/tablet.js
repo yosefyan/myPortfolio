@@ -1,6 +1,6 @@
 const folder = document.querySelectorAll(".folder");
 const pages = document.getElementById("pages");
-const projectsList = ["landingPages", "jsProjects"];
+const projectsList = ["landingPages", "jsProjects", "reactProjects"];
 const homeButton = document.getElementById("homeButton");
 
 //default class, starts with 'selected'
@@ -37,4 +37,3 @@ folder.forEach((fold, index) => {
     fold.classList.add("selected");
   });
 });
-

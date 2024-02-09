@@ -137,6 +137,14 @@ const data = {
       dHref: "./Projects/javaScriptZips/Calendary.zip",
     },
   },
+  react: {
+    19: {
+      subTitle:
+        "ReadySP is a comprehensive online platform that allows you to create an account and explore a variety of business cards tailored to your interests. As a business owner, you have the flexibility to design, edit, delete, and manage your own card with ease, giving you full control over your online presence.",
+      href: "https://github.com/yosefyan/reactProject",
+      dHref: "../Projects/react/ReadySP.zip",
+    },
+  },
 };
 
 /**
